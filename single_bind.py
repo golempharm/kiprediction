@@ -6,8 +6,8 @@ st.title('GoLem Pharm')
 st.write('')
 
 #input box
-int_put = st.text_input('Compound in SMILES format:')
-int_put2 =  st.text_input('Sequence of protein:')
+int_put = st.text_input('Compound in SMILES format:', value="E.g. COc1ccc(NC(=O)Nc2nc3ccc(Cl)cc3c3nc(nn23)")
+int_put2 =  st.text_input('Sequence of protein:',  value="E.g. MLLETQDALYVALELVIAALSVAGNVLVCAAVGTAN")
 
 if int_put2:
  review_lines = [str(int_put + ' ' + int_put2), str(int_put + ' ' + int_put2)]
