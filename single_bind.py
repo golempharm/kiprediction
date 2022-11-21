@@ -11,7 +11,7 @@ int_put2 =  st.text_input('Sequence of protein:   e.g. MLLETQDALYVALELVIAALSVAGN
 
 if int_put2:
  review_lines = [str(int_put + ' ' + int_put2), str(int_put + ' ' + int_put2)]
- word_index1 = np.load('./word_index_rnn.npy',allow_pickle='TRUE').item()
+ word_index1 = np.load('./word_index_100.npy',allow_pickle='TRUE').item()
 
  from keras.preprocessing.text import Tokenizer
  from keras.preprocessing.sequence import pad_sequences
@@ -29,9 +29,9 @@ if int_put2:
 
 
  from keras.models import load_model
- model2 = load_model('./final_model_rnn.h5')
+ model2 = load_model('./final_modellog.h5')
  predict_x=model2.predict(x_test)
 
  st.write('')
  st.header ('Result:')
- st.header ( 'Ki = ' + str(round(float(predict_x[0][0]), 2)) + ' nM')
+ st.header ( 'pKi = ' + str(round(float(predict_x[0][0]), 2)))
