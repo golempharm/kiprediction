@@ -13,7 +13,7 @@ if int_put2:
  review_lines = [str(int_put + ' ' + int_put2), str(int_put + ' ' + int_put2)]
  word_index1 = np.load('./word_index_100.npy',allow_pickle='TRUE').item()
 
- from keras.preprocessing.text import Tokenizer
+ from keras.layers import TextVectorization; import tokenizer
  from keras.preprocessing.sequence import pad_sequences
  from tensorflow.keras.utils import to_categorical
 
